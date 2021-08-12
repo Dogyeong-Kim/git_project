@@ -2,12 +2,14 @@
 
 ### Date created
 2021-08-12 Created
+2021-08-12 Updated
 
 ### Project Title
 Udacity-Git-Project
 
 ### Description
-Learn about git and github
+* Learn about git and github
+* Practice version control
 
 ### Files used
 * bikeshare.py
@@ -16,5 +18,4 @@ Learn about git and github
 * washington.csv(ignored)
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 * https://guides.github.com/features/mastering-markdown/
