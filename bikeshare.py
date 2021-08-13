@@ -6,6 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+#Filtering city, month, day
 def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     city_input = input("city : ").lower()
@@ -53,6 +54,7 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
+#Loading datas
 def load_data(city, month, day):
     df = pd.read_csv("{}.csv".format(city))
     
@@ -72,7 +74,7 @@ def load_data(city, month, day):
 
     return df
 
-
+#Carculating frequent month, week and hour
 def time_stats(df):
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -96,7 +98,7 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+#Calculating popular stations
 def station_stats(df):
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -117,7 +119,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+#Carculating travel time
 def trip_duration_stats(df):
 
     print('\nCalculating Trip Duration...\n')
@@ -134,7 +136,7 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+#Calculate user stats(gender, birth year)
 def user_stats(df):
 
     print('\nCalculating User Stats...\n')
@@ -165,6 +167,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+#Displaying datas
 def display_data(df):
     pd.set_option('display.max_columns',200)
     view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no?")
@@ -182,6 +185,7 @@ def display_data(df):
     else:
         return None
 
+#Running  all functions
 def main():
     while True:
         city, month, day = get_filters()
