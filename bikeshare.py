@@ -6,10 +6,13 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+<<<<<<< HEAD
 #Filtering city, month, day
+=======
+#Filtering city, month and day
+>>>>>>> refactoring
 def get_filters():
-    print('Hello! Let\'s explore some US bikeshare data!')
-    city_input = input("city : ").lower()
+    city_input = input("Hello! Let\'s explore some US bikeshare data!\ncity : ").lower()
     city = city_input.replace(' ', '_')
     city_i = 1
     
@@ -18,8 +21,7 @@ def get_filters():
         if city in CITY_DATA != True:
            break
         else:
-           print("This is invaild input. Please input correct ones.")
-           city_input = input("city : ").lower()
+           city_input = input("This is invaild input. Please input correct ones.\ncity : ").lower()
            city = city_input.replace(' ', '_')
            city_i += 1
             
@@ -33,8 +35,7 @@ def get_filters():
         if month in months != True:
            break
         else:
-           print("This is invaild input. Please input correct ones.")
-           month = input("month : ").lower()
+           month = input("This is invaild input. Please input correct ones.\nmonth : ").lower()
            month_i += 1
 
     day_of_weeks = ["all", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
@@ -47,14 +48,17 @@ def get_filters():
         if day in day_of_weeks != True:
            break
         else:
-           print("This is invaild input. Please input correct ones.")
-           day = input("day of week : ").lower()
+           day = input("This is invaild input. Please input correct ones.\nday of week : ").lower()
            day_i += 1
 
     print('-'*40)
     return city, month, day
 
+<<<<<<< HEAD
 #Loading datas
+=======
+#Loading Datas
+>>>>>>> refactoring
 def load_data(city, month, day):
     df = pd.read_csv("{}.csv".format(city))
     
@@ -74,7 +78,11 @@ def load_data(city, month, day):
 
     return df
 
+<<<<<<< HEAD
 #Carculating frequent month, week and hour
+=======
+#Calculating frequent month, week and hour
+>>>>>>> refactoring
 def time_stats(df):
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -95,10 +103,17 @@ def time_stats(df):
     
     print('Common Hour :', common_hour)
 
+<<<<<<< HEAD
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 #Calculating popular stations
+=======
+    print("\nThis took {} seconds.\n{}".format(time.time() - start_time, '-'*40))
+    
+
+#Calculating polular stations
+>>>>>>> refactoring
 def station_stats(df):
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -116,10 +131,16 @@ def station_stats(df):
                                        
     print('Frequent Combination Stations :', frequent_combination)
 
+<<<<<<< HEAD
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 #Carculating travel time
+=======
+    print("\nThis took {} seconds.\n{}".format(time.time() - start_time, '-'*40))
+
+#Calculating travel times
+>>>>>>> refactoring
 def trip_duration_stats(df):
 
     print('\nCalculating Trip Duration...\n')
@@ -133,10 +154,16 @@ def trip_duration_stats(df):
     
     print('Mean Travel Time:', mean_time)
 
+<<<<<<< HEAD
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 #Calculate user stats(gender, birth year)
+=======
+    print("\nThis took {} seconds.\n{}".format(time.time() - start_time, '-'*40))
+
+#Calculating user stats(gender, birth year)
+>>>>>>> refactoring
 def user_stats(df):
 
     print('\nCalculating User Stats...\n')
@@ -164,10 +191,13 @@ def user_stats(df):
     else:
         print('Gender stats cannot be calculated because Birth Year does not appear in the dataframe')
     
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print("\nThis took {} seconds.\n{}".format(time.time() - start_time, '-'*40))
 
+<<<<<<< HEAD
 #Displaying datas
+=======
+#displaying datas
+>>>>>>> refactoring
 def display_data(df):
     pd.set_option('display.max_columns',200)
     view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no?")
@@ -185,7 +215,11 @@ def display_data(df):
     else:
         return None
 
+<<<<<<< HEAD
 #Running  all functions
+=======
+#Running all functions
+>>>>>>> refactoring
 def main():
     while True:
         city, month, day = get_filters()
