@@ -91,8 +91,8 @@ def time_stats(df):
     
     print('Common Hour :', common_hour)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print("\nThis took {} seconds.\n{}".format(time.time() - start_time, '-'*40))
+    
 
 #Calculating polular stations
 def station_stats(df):
@@ -112,8 +112,7 @@ def station_stats(df):
                                        
     print('Frequent Combination Stations :', frequent_combination)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print("\nThis took {} seconds.\n{}".format(time.time() - start_time, '-'*40))
 
 #Calculating travel times
 def trip_duration_stats(df):
@@ -129,8 +128,7 @@ def trip_duration_stats(df):
     
     print('Mean Travel Time:', mean_time)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print("\nThis took {} seconds.\n{}".format(time.time() - start_time, '-'*40))
 
 #Calculating user stats(gender, birth year)
 def user_stats(df):
@@ -160,8 +158,7 @@ def user_stats(df):
     else:
         print('Gender stats cannot be calculated because Birth Year does not appear in the dataframe')
     
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print("\nThis took {} seconds.\n{}".format(time.time() - start_time, '-'*40))
 
 #displaying datas
 def display_data(df):
