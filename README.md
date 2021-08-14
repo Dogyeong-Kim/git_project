@@ -4,6 +4,7 @@
 * 2021-08-12 Created
 * 2021-08-12 Updated
 * 2021-08-13 Updated
+* 2021-08-14 Updated
 
 ### Project Title
 Udacity-Git-Project
@@ -15,9 +16,10 @@ Udacity-Git-Project
 2. What did i do
     1. Add bikeshare.py
     2. Create branch **documentation**
-    3. Update README.md
-    4. Update bikeshare.py
-    5. Update README.md
+    3. Create branch **refactoring**
+    4. Update README.md - Notice what i did
+    5. Update bikeshare.py - Add some comments, Refactoring, Conflict resolve
+    6. Merge all branchs to **master** branch
 
 ### Files used
 * bikeshare.py
